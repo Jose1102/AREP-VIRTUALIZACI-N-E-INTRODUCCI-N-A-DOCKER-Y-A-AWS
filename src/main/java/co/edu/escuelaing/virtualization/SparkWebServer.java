@@ -1,5 +1,7 @@
 package co.edu.escuelaing.virtualization;
 
+import com.google.gson.Gson;
+
 import java.util.Date;
 
 import static spark.Spark.port;
@@ -9,16 +11,21 @@ public class SparkWebServer {
 
 
     public static void main(String... args){
-
-        /*
-        port(getPort());
-        get("hello", (req,res) -> "Hello Docker!");
-
-
-         */
-
         Connection conexion = new Connection();
-        Mensaje mensa = new Mensaje("Hola a todos");
+
+
+        port(getPort());
+        get("hello", (req,res) -> {
+            res.status(200);
+            res.type("application/json");
+            return new Gson().toJson(conexion.getMensaje());
+        });
+
+
+
+
+
+        //Mensaje mensa = new Mensaje("Hola a todos");
         //conexion.insertarMensaje(mensa);
         System.out.println(conexion.getMensaje().get(0).getMensaje());
     }
