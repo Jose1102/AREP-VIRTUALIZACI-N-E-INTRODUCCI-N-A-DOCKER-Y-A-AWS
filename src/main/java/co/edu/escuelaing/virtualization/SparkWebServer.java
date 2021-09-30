@@ -2,19 +2,22 @@ package co.edu.escuelaing.virtualization;
 
 import com.google.gson.Gson;
 
-import java.util.Date;
-
-import static spark.Spark.port;
-import static spark.Spark.get;
+import static spark.Spark.*;
 
 public class SparkWebServer {
 
 
     public static void main(String... args){
         Connection conexion = new Connection();
-
+        staticFileLocation("/static");
 
         port(getPort());
+
+        get("/", (req, res) -> {
+            res.redirect("index.html");
+            return null;
+        });
+
         get("hello", (req,res) -> {
             res.status(200);
             res.type("application/json");
