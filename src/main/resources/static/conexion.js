@@ -16,6 +16,24 @@ function getValueInput() {
             const {mensaje} = valor;
             console.log(mensaje);
 
+            const tabla = <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th>Information</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>{mensaje}</td>
+
+                </tr>
+                </tbody>
+            </table>;
+
+
+            ReactDOM.render(tabla, divTabla);
+
         })
 
 
