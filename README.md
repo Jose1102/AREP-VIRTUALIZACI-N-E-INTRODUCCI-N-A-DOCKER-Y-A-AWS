@@ -50,10 +50,43 @@ https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS
 mvn package
 ```
 
-3. Ejecutar el proyecto
+3. Ejecutar el proyecto local
 ```
 java -cp "target/classes;target/dependency/*" co.edu.escuelaing.virtualization.SparkWebServer
 ```
+
+
+Para ver la lista de mensajes se oprime el botón Retornar
+
+![retornar](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/local/retornar.PNG)
+
+
+Para agregar un nuevo mensaje se debe colocar en el input el mensaje y darle click en Añadir
+
+
+![AGREGAR](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/local/a%C3%B1adir.PNG)
+
+
+Para ver el mensaje que se agregó se da nuevamente en Retornar, podremos ver el mensaje al final
+
+![MENSAJE](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/local/retornardespuesdeagregar.PNG)
+
+
+Por último para ver la lista de Jsons se puede de la siguiente forma
+
+![GET](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/local/getJson.PNG)
+
+4. AWS
+
+Se realiza despligue en AWS 
+
+![AWS](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/aws.PNG)
+
+
+Se creó contenedor y imagen en docker en el EC2
+![DOCKER](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/ec2.PNG)
+
+
 
 ## Ejecutando las pruebas
 
@@ -63,7 +96,7 @@ java -cp "target/classes;target/dependency/*" co.edu.escuelaing.virtualization.S
 mvn test
 ```
 
-![Test](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/tests.PNG)
+![Test](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/test.PNG)
 
 ## Diagrama de clases 📖
 
