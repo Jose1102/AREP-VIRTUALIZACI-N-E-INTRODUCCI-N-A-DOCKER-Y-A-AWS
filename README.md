@@ -11,7 +11,7 @@ El taller consiste en crear una aplicación web pequeña usando el micro-framewo
 
 
 * **Jose María Castro Ortega** - *Autor*  - *Estudiante de ingeniería de sistemas*
-* **01/10/2021** - *Fecha*
+* **30/09/2021** - *Fecha*
 
 
 ## Tabla de contenido
