@@ -21,13 +21,14 @@ El taller consiste en crear una aplicación web pequeña usando el micro-framewo
 - [Enunciado](#enunciado).
 - [Comenzando](#comenzando-).
 - [Ejecutando las pruebas](#ejecutando-las-pruebas)
+- [Documento](#documento)
 - [Productividad](#productividad).
 - [Javadoc](#javaDoc-).
 - [Licencia](#licencia-)
 
 ## Circleci
 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Jose1102/PicasYFamasGame)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS)
 
 ## Requisitos 📋
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
@@ -97,6 +98,12 @@ mvn test
 ```
 
 ![Test](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/test.PNG)
+
+
+## Documento
+
+Se explica como se hizo crea imagen y contenedor en docker y además como crear EC2 y relizar push a imagen de docker en el sguiente [DOCUMENTO PDF](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/documentacion.pdf)
+
 
 ## Diagrama de clases 📖
 
