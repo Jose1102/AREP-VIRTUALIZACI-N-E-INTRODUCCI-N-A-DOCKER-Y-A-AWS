@@ -2,6 +2,8 @@ package co.edu.escuelaing.virtualization;
 
 import com.google.gson.Gson;
 
+import java.util.Date;
+
 import static spark.Spark.*;
 
 public class SparkWebServer {
@@ -10,6 +12,13 @@ public class SparkWebServer {
     public static void main(String... args){
         Connection conexion = new Connection();
         staticFileLocation("/static");
+
+        //System.out.println(conexion.sizeArray());
+
+        //Mensaje mensa = new Mensaje("Hola a todos", new Date());
+        //conexion.insertarMensaje(mensa);
+
+        //System.out.println(mensa);
 
         port(getPort());
 
@@ -21,16 +30,29 @@ public class SparkWebServer {
         get("hello", (req,res) -> {
             res.status(200);
             res.type("application/json");
+
+
             return new Gson().toJson(conexion.getMensaje());
+        });
+        get("size", (req,res) -> {
+            res.status(200);
+            res.type("application/json");
+            return conexion.sizeArray();
+        });
+
+
+        post("/resultados", (req, res) -> {
+            Mensaje mensajeEnviar = new Mensaje(req.body(),new Date());
+            conexion.insertarMensaje(mensajeEnviar);
+            return "";
         });
 
 
 
 
 
-        //Mensaje mensa = new Mensaje("Hola a todos");
-        //conexion.insertarMensaje(mensa);
-        System.out.println(conexion.getMensaje().get(0).getMensaje());
+
+        //System.out.println(conexion.getMensaje().get(0).getMensaje());
     }
 
     private static int getPort() {

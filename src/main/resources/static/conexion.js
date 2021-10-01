@@ -1,42 +1,91 @@
 function getValueInput() {
 
     let inputValue = document.getElementById("domTextElement").value;
-
     const divRoot = document.querySelector('#root');
 
-    const divTabla = document.querySelector('#tablaIdentificador');
     const abb = <h1 class="text-uppercase">Microservicio!</h1>
     const peticion = fetch(`http://localhost:4567/hello`);
+    console.log(checkSize())
 
     peticion
         .then(resp => resp.json())
         .then( mensajes => {
 
-            let valor = mensajes[0]
-            const {mensaje} = valor;
-            console.log(mensaje);
+            for (let i = 0; i < 9; i++) {
+                const valor = mensajes[i];
+                const {mensaje,fecha} = valor;
+                let contador = i+1;
 
-            const tabla = <table class="table table-dark">
-                <thead>
+                const temp = mensaje;
+                const fechaTemp = fecha;
+                console.log(temp);
+                document.getElementById("body").innerHTML += `
                 <tr>
-                    <th>Information</th>
-
+                      <th scope="row">${contador}</th>
+                      <td>${temp}</td>
+                      <td>${fechaTemp}</td>
                 </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>{mensaje}</td>
-
-                </tr>
-                </tbody>
-            </table>;
+                `;
 
 
-            ReactDOM.render(tabla, divTabla);
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
+
 
         })
 
 
 }
+
+function sendMessage() {
+
+    var url=window.location.href+'/resultados';
+    var mensaje=document.getElementById("domTextElement").value;
+
+    axios.post(url,mensaje)
+        .then(res => {
+                console.log(res);
+            }
+        )
+
+    location.reload();
+}
+
+function checkSize() {
+
+    const peticionSize = fetch(`http://localhost:4567/size`);
+
+    peticionSize
+        .then(resp => resp.json())
+        .then(size =>{
+
+            return size;
+
+            }
+
+
+        )
+    console.log()
+
+}
+
+function tamaño(size){
+
+    return size;
+
+}
+
 
 
