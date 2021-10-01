@@ -34,6 +34,8 @@ El taller consiste en crear una aplicación web pequeña usando el micro-framewo
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Git](https://git-scm.com/) - Software de control de versiones
 * [Java](https://www.oracle.com/java/) - Lenguaje de programación
+* [Docker](https://www.docker.com/) - Administrador de contenedores
+* [Spark](http://sparkjava.com/) - Micro framework para crear aplicaciones web en Java 8
 
 ## Enunciado
 
