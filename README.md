@@ -100,29 +100,9 @@ mvn test
 
 ## Diagrama de clases 📖
 
-Se tiene un controlador llamado DamasYFijasController que realiza el llamado de los métodos get y post y son consumidos por dos páginas html. A demás por medio del atributo service se inyecta y realiza el llamado a la clase IServiceTablero donde está implementa una interface que calcula la cantidad de picas, famas y si es ganador o no.
 
-![WebServer](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/service.PNG)
-
-
-Por otro lado, aparte de inyectar service la clase DamasYFijasController tambien hace la inyección de repo que es una interface que extiende de JpaRepository.
-
-![Datagram](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/controller.PNG)
-
-
-La interface ITableroRepo extiende de JpaRepository  en la que se le envía una entidad tipo Tablero y el id de está entidad que para este caso es de tipo Integer
-
-![Datagram](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/jparepository.PNG)
-
-
-La clase Tablero es una entidad que tiene como atributos un id,picas,famas y el número que ingresa el usuario
-
-![Datagram](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/tablero.PNG)
-
-
-La clase DamasYFijasController que es el controllador, hace el uso de la entidad Tablero por medio de la inyección repo donde esta hace uso de la interface ITableroRepo que extiende de JpaRepository
-
-![Datagram2](https://github.com/Jose1102/PicasYFamasGame/blob/master/images/tablerorepo.PNG)
+Se puede observar como se realiza la conexión por medio de un MongoCLientURI y un MongoCLient en la clase Connection,Todo este proceso se inicializa desde la clase principal que es SparkWebServer
+![Datagram2](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/images/image.png)
 
 
 
@@ -134,7 +114,7 @@ La productividad de este proyecto fue:
 
 ## JavaDoc 📖
 
-Para consultar la carpeta de [JAVADOC](https://github.com/Jose1102/PicasYFamasGame/tree/master/javadoc) .
+Para consultar la carpeta de [JAVADOC](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/tree/main/doc) .
 
 ## Licencia 📌
 
