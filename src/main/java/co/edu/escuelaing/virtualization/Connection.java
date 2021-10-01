@@ -9,11 +9,18 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * Clase que realiza la conexión con la base de datos de Mongo
+ * @author Jose María Castro Ortega
+ */
 public class Connection {
 
     MongoClientURI uri;
     MongoClient mongoCliente;
 
+    /**
+     * Constructor de la clase Connection, inicializa la conexion  a la base de datos
+     */
     public Connection() {
 
         uri = new MongoClientURI("mongodb+srv://dbArepLab:dbArepLab@cluster0.v7bh7.mongodb.net/dbArepLab?retryWrites=true&w=majority");
@@ -21,6 +28,10 @@ public class Connection {
     }
 
 
+    /**
+     * Metodo que retorna una lista de Mensajes
+     * @return mensaje que es un ArrayList de mensajes, son todos los mensajes que se han creado en la base de datos
+     */
     public ArrayList<Mensaje> getMensaje()
     {
         MongoDatabase database = mongoCliente.getDatabase("dbArepLab");
@@ -37,11 +48,19 @@ public class Connection {
         return mensaje;
     }
 
+    /**
+     * Metodo que retorna el tamaño del array de mensajes
+     * @return size que es un int
+     */
     public int sizeArray(){
         return getMensaje().size();
     }
 
 
+    /**
+     * Metodo que inserta un nuevo Mensaje en la base de datos
+     * @param mensaje que es el mensaje que el usuario quiere registrar
+     */
     public void insertarMensaje(Mensaje mensaje)
     {
         mongoCliente = new MongoClient(uri);

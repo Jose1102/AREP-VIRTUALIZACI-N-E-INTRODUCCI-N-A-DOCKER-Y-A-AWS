@@ -6,9 +6,17 @@ import java.util.Date;
 
 import static spark.Spark.*;
 
+/**
+ * Clase SparkWebServer encargada de hacer iniciar todo el programa
+ * @author Jose Maria Castro Ortega
+ */
 public class SparkWebServer {
 
 
+    /**
+     * Clase principal que llama la conexión y los metodos get y post
+     * @param args
+     */
     public static void main(String... args){
         Connection conexion = new Connection();
         staticFileLocation("/static");
@@ -55,6 +63,10 @@ public class SparkWebServer {
         //System.out.println(conexion.getMensaje().get(0).getMensaje());
     }
 
+    /**
+     * Método estático que retona un enter que es número del puerto del localhost
+     * @return 4567 que es el puerto
+     */
     private static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
