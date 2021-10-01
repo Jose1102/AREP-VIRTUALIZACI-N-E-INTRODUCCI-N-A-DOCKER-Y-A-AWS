@@ -118,4 +118,4 @@ Para consultar la carpeta de [JAVADOC](https://github.com/Jose1102/AREP-VIRTUALI
 
 ## Licencia 📌
 
-Este proyecto está bajo la Licencia Pública General GNU - consulte el archivo de [LICENCIA](https://github.com/Jose1102/PicasYFamasGame/blob/master/LICENSE.txt) para obtener más detalles.
+Este proyecto está bajo la Licencia Pública General GNU - consulte el archivo de [LICENCIA](https://github.com/Jose1102/AREP-VIRTUALIZACI-N-E-INTRODUCCI-N-A-DOCKER-Y-A-AWS/blob/main/LICENSE.txt) para obtener más detalles.
